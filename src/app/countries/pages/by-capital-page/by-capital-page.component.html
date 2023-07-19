@@ -1,0 +1,25 @@
+<h2>Por Capital</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- no ponemos llaver cuadradas porque aunque es un imput nosotros mandamos un string, como no es codigo de javascript no hace falta ponerlas-->
+        <shared-search-box 
+            placeholder="Buscar"
+            (onValue)="searchByCapital($event)"
+        ></shared-search-box>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <hr>
+        <!-- <ul>
+            <li *ngFor="let country of countries">
+                {{ country.capital }} -- {{country.population}}
+            </li>
+        </ul> -->
+        <countries-country-table [countries]="countries"></countries-country-table>
+    </div>
+</div>
+
